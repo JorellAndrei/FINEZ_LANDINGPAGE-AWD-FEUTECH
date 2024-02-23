@@ -106,7 +106,7 @@ document.querySelector('.item3').addEventListener('click', function() {
 });
 
 document.querySelector('.item4').addEventListener('click', function() {
-    window.open('', '_blank');
+    window.open('https://jorellandrei.github.io/FINEZ_ACT4-AWD-FEUTECH/', '_blank');
 });
 
 document.querySelector('.item5').addEventListener('click', function() {
