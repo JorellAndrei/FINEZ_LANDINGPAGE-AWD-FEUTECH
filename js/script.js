@@ -98,5 +98,5 @@ document.querySelector('.item1').addEventListener('click', function() {
 });
 
 document.querySelector('.item2').addEventListener('click', function() {
-    window.open('https://jorellandrei.github.io/FINEZ_ANIMATION-AWD-FEUTECH/', '_blank');
+    window.open('https://jorellandrei.github.io/FINEZ_ACT2-AWD-FEUTECH/', '_blank');
 });
