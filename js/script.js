@@ -94,7 +94,7 @@ document.addEventListener('touchmove', handleMouseMove)
 document.addEventListener('touchend', handleMouseUp)
 
 document.querySelector('.item1').addEventListener('click', function() {
-    window.open('https://jorellandrei.github.io/FINEZ_RESUME-AWD-FEUTECH/', '_blank');
+    window.open('https://jorellandrei.github.io/FINEZ_ACT1-AWD-FEUTECH/', '_blank');
 });
 
 document.querySelector('.item2').addEventListener('click', function() {
