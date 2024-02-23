@@ -102,5 +102,21 @@ document.querySelector('.item2').addEventListener('click', function() {
 });
 
 document.querySelector('.item3').addEventListener('click', function() {
-    window.open('https://jorellandrei.github.io/FINEZ_ACT2-AWD-FEUTECH/', '_blank');
+    window.open('https://jorellandrei.github.io/FINEZ_ACT3A-AWD-FEUTECH/', '_blank');
+});
+
+document.querySelector('.item4').addEventListener('click', function() {
+    window.open('', '_blank');
+});
+
+document.querySelector('.item5').addEventListener('click', function() {
+    window.open('', '_blank');
+});
+
+document.querySelector('.item6').addEventListener('click', function() {
+    window.open('', '_blank');
+});
+
+document.querySelector('.item7').addEventListener('click', function() {
+    window.open('', '_blank');
 });
