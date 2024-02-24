@@ -120,3 +120,11 @@ document.querySelector('.item6').addEventListener('click', function() {
 document.querySelector('.item7').addEventListener('click', function() {
     window.open('https://jorellandrei.github.io/FINEZ_RESUME-AWD-FEUTECH/', '_blank');
 });
+
+document.querySelector('.item8').addEventListener('click', function() {
+    window.open('https://jorellandrei.github.io/FINEZ_TECHNICAL2-AWD-FEUTECH/', '_blank');
+});
+
+document.querySelector('.item9').addEventListener('click', function() {
+    window.open('https://jorellandrei.github.io/FINEZ_TECHNICAL3-AWD-FEUTECH/', '_blank');
+});
