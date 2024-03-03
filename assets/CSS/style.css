@@ -39,7 +39,7 @@ body #social a:hover svg {
 }
 
 body #social a:hover svg path {
-    fill: #08350e;
+    fill: #86b9b0;
 }
 
 body #social svg {
@@ -51,7 +51,7 @@ body #social svg {
 }
 
 body #social svg path {
-    fill: #a58725;
+    fill: #071b25;
     transition: 0.2s ease-in-out;
 }
 
@@ -70,7 +70,7 @@ body #loader {
     transition: transform 0.6s cubic-bezier(1, 0.885, 0.32, 1);
     transition-delay: 1.25s;
     transform-origin: bottom;
-    background: #fe4e01;
+    background: #ffffff;
     transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -82,7 +82,7 @@ body #loader:before {
     width: 100%;
     height: 75%;
     top: -75%;
-    background: #a58725;
+    background: #071b25;
     -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
 }
@@ -245,17 +245,17 @@ body.loaded #wrap h1 span.word:before {
 }
 
 body.loaded::-webkit-scrollbar {
-    background: #a58725;
-    width: 5px;
+    background: #4c7273;
+    width: 10px;
 }
 
 body::-webkit-scrollbar {
-    background: #fe4e01;
-    width: 5px;
+    background: #86b9b0;
+    width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #fe4e01;
+    background: #86b9b0;
 }
 
 body.active {
@@ -304,11 +304,11 @@ body.active #frame #close strong span.char:before {
 }
 
 body.active #frame #close:hover {
-    box-shadow: 0 0 0 2px #fe4e01, inset 0 0 0 20px #fe4e01, 0 0 0 20px #eeece5, 0 0 0 22px #fe4e01;
+    box-shadow: 0 0 0 2px #041421, inset 0 0 0 20px #041421, 0 0 0 20px #eeece5, 0 0 0 22px #041421;
 }
 
 body.active #frame #close:hover strong span.char:before {
-    color: #08350e;
+    color: #042630;
 }
 
 body.active #frame #close div {
@@ -354,7 +354,7 @@ body #close strong.circle {
 }
 
 body #close strong.circle span.word span.char:before {
-    color: #fe4e01;
+    color: #81b6ae;
 }
 
 body #close strong.circle span.word span.char:nth-of-type(1) {
@@ -508,7 +508,7 @@ body #frame {
     top: 0;
     width: 100vw;
     height: 100vh;
-    background: #eeece5;
+    background: #4c5759;
     box-sizing: border-box;
     display: grid;
     place-items: center;
@@ -529,7 +529,7 @@ body #frame:after {
     height: 100%;
     top: 0;
     left: -12.5%;
-    background: #fe4e01;
+    background: #042630;
     transition: transform 1s cubic-bezier(1, 0.885, 0.32, 1);
     transition-delay: 0.25s;
     z-index: 999;
@@ -538,7 +538,7 @@ body #frame:after {
 
 body #frame:after {
     z-index: 98;
-    background: linear-gradient(to right, #eeece5 75%, #a58725 100%);
+    background: linear-gradient(to right, #eeece5 75%, #042630 100%);
     width: 125%;
     transition: transform 1.25s cubic-bezier(1, 0.885, 0.32, 1);
 }
@@ -549,7 +549,7 @@ body #frame #close {
     top: 45px;
     width: 30px;
     height: 30px;
-    box-shadow: 0 0 0 2px #08350e, inset 0 0 0 #fe4e01, 0 0 0 20px #eeece5, 0 0 0 22px #fe4e01;
+    box-shadow: 0 0 0 2px #042630, inset 0 0 0 #81b6ae, 0 0 0 20px #042630, 0 0 0 22px #81b6ae;
     background: #eeece5;
     border-radius: 100%;
     position: absolute;
@@ -630,7 +630,7 @@ body #frame .frame-container #penlink {
     position: absolute;
     bottom: -10px;
     text-decoration: none;
-    color: #fe4e01;
+    color: #d1d7d6;
     font-weight: 900;
     transition: color 0.2s ease-in-out, transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition-delay: 0.2s;
@@ -681,7 +681,7 @@ body #frame .frame-container #penlink:after {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(to bottom, #fe4e01 50%, #a58725 50%) 50% 100%/100% 200% no-repeat;
+    background: linear-gradient(to bottom, #042630 50%, #86b9b0 50%) 50% 100%/100% 200% no-repeat;
     left: 0;
     top: 0;
     transform: scaleY(0);
@@ -697,7 +697,7 @@ body #frame .frame-container #penlink:before {
     height: calc(100% + 4px);
     top: calc(2px/ -1);
     left: calc(2px/ -1);
-    background: linear-gradient(to right, #08350e 0%, #08350e 100%), linear-gradient(to top, #08350e 50%, transparent 50%), linear-gradient(to top, #08350e 50%, transparent 50%), linear-gradient(to right, #08350e 0%, #08350e 100%), linear-gradient(to left, #08350e 0%, #08350e 100%);
+    background: linear-gradient(to right, #254c51 0%, #254c51 100%), linear-gradient(to top, #254c51 50%, transparent 50%), linear-gradient(to top, #254c51 50%, transparent 50%), linear-gradient(to right, #254c51 0%, #254c51 100%), linear-gradient(to left, #254c51 0%, #254c51 100%);
     background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
     background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
     background-repeat: no-repeat, no-repeat;
@@ -750,8 +750,8 @@ body #cursor {
     border-radius: 100%;
     top: 0%;
     left: 0%;
-    border: 2px solid #a58725;
-    box-shadow: inset 0 0 0 0 #a58725;
+    border: 2px solid #042630;
+    box-shadow: inset 0 0 0 0 #042630;
     pointer-events: none;
     display: flex;
     justify-content: center;
@@ -770,7 +770,7 @@ body #cursor:after {
     position: absolute;
     width: 10px;
     height: 2px;
-    background: #eeece5;
+    background: #f0efed;
     top: calc(50% - 1px);
     left: 14px;
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -783,7 +783,7 @@ body #cursor:after {
 body #cursor.linkhover {
     border-color: transparent;
     border-width: 4px;
-    box-shadow: 0 0 0 2px #fe4e01;
+    box-shadow: 0 0 0 2px #86b9b0;
 }
 
 body #cursor.active strong.circle span.word {
@@ -805,7 +805,7 @@ body #cursor.active:after {
 }
 
 body #cursor.active strong {
-    box-shadow: inset 0 0 0 20px #a58725;
+    box-shadow: inset 0 0 0 20px #689b9c;
 }
 
 body #cursor.active strong:before {
@@ -864,13 +864,13 @@ body #wrap h1:after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background: #a58725;
+    background: #4c7979;
     z-index: 2;
 }
 
 body #wrap h1:after {
     transform-origin: left;
-    background: #fe4e01;
+    background: #071b25;
     z-index: 3;
     transform: scaleX(calc(1 - (var(--progress) * 2)));
 }
@@ -889,9 +889,9 @@ body #wrap h1 span.word:before {
     content: attr(data-word);
     color: #08350e;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px #08350e;
+    -webkit-text-stroke: 2px #bac2c9;
     -webkit-background-clip: text;
-    background-image: linear-gradient(to bottom, #08350e 50%, #eeece5 50%);
+    background-image: linear-gradient(to bottom, #041421 50%, #eeece5 50%);
     background-size: 100% 200%;
     background-position: 50% 100%;
     transition: 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-position 0.5s cubic-bezier(1, 0.885, 0.32, 1);
@@ -902,15 +902,15 @@ body #wrap p.subhead {
     text-align: center;
     position: relative;
     color: #08350e;
-    font-size: 1rem;
-    color: #a58725;
+    font-size: 1.4rem;
+    color: #4c7273;
     opacity: 0;
     transform: translateY(50px);
     transition: 0.6s ease-in-out;
 }
 
 body #wrap p.subhead.final {
-    color: #08350e;
+    color: #4c7273;
     display: block;
     margin: 0px auto;
     width: 100px;
@@ -923,7 +923,7 @@ body #wrap p.subhead.final:after {
     width: 25vw;
     max-width: 500px;
     height: 1px;
-    border-bottom: 2px #a58725 dashed;
+    border-bottom: 2px #4c7273 dashed;
     top: calc(50% - 1.5px);
     opacity: 0.25;
     left: 100px;
@@ -1184,7 +1184,7 @@ body #wrap .panel:before {
     justify-content: flex-start;
     align-items: center;
     color: #eeece5;
-    -webkit-text-stroke: 2px #a58725;
+    -webkit-text-stroke: 2px #4c7273;
     line-height: 1;
     opacity: 0;
     transition: 1.75s ease-in-out;
@@ -1245,30 +1245,6 @@ body #wrap .panel h2 span.word:nth-of-type(6) {
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-1.5s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
 }
 
-@-webkit-keyframes waving {
-    to {
-        background-position: 200px 65px;
-    }
-}
-
-@keyframes waving {
-    to {
-        background-position: 200px 65px;
-    }
-}
-
-@-webkit-keyframes waving2 {
-    to {
-        background-position: 200px 0px;
-    }
-}
-
-@keyframes waving2 {
-    to {
-        background-position: 200px 0px;
-    }
-}
-
 body #wrap .panel h2 span.word:before {
     content: attr(data-word);
     position: absolute;
@@ -1278,13 +1254,13 @@ body #wrap .panel h2 span.word:before {
     color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(to bottom, transparent 25%, #fe4e01 25%, #fe4e01 75%, transparent 75%);
+    background-image: linear-gradient(to bottom, transparent 25%, #4c7273 25%, #4c7273 75%, transparent 75%);
     background-size: 100% 250%;
     background-repeat: no-repeat;
     background-position: 50% calc((var(--progress) * 200px) - 150px);
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition-delay: 1.25s;
-    -webkit-text-stroke: 2px #fe4e01;
+    -webkit-text-stroke: 2px #041421;
 }
 
 body #wrap .panel h2 span.word:nth-of-type(3n):before {
@@ -1365,7 +1341,7 @@ body #wrap .panel:nth-of-type(even) .thumb p {
 body #wrap .panel .thumb {
     grid-area: 2/3/5/6;
     position: relative;
-    box-shadow: 0 0 0 2px #08350e;
+    box-shadow: 0 0 0 2px #041421;
     transition: box-shadow 0.3s ease-in-out;
     border-radius: 5px;
 }
@@ -1381,8 +1357,8 @@ body #wrap .panel .thumb p {
     width: 100%;
     top: -30px;
     margin: 0;
-    color: #a58725;
-    font-size: 12px;
+    color: #122529;
+    font-size: 13px;
     left: 0;
     text-align: center;
 }
@@ -1409,7 +1385,7 @@ body #wrap .panel .thumb .inner:after {
     height: 100%;
     top: 0;
     left: 0;
-    background: #a58725;
+    background: #948c9c;
     mix-blend-mode: lighten;
     opacity: 0.5;
     z-index: 2;
@@ -1424,7 +1400,7 @@ body #wrap .panel .thumb .inner:after {
 
 body #wrap .panel .thumb:hover:before {
     transform: translate(-5%, -5%);
-    box-shadow: 0 0 0 2px #a58725, 0 0 0 6px #eeece5, 0 0 0 8px #fe4e01;
+    box-shadow: 0 0 0 2px #4c5759, 0 0 0 6px #eeece5, 0 0 0 8px #689b9c;
     transition-delay: 0s, 0.2s;
 }
 
@@ -1435,10 +1411,10 @@ body #wrap .panel .thumb:before {
     height: 100%;
     left: 5%;
     top: 5%;
-    box-shadow: 0 0 0 2px #a58725, 0 0 0 0 #eeece5, 0 0 0 0 #fe4e01;
+    box-shadow: 0 0 0 2px #948c9c, 0 0 0 0 #eeece5, 0 0 0 0 #948c9c;
     transition: transform 0.2s cubic-bezier(1, 0.885, 0.32, 1), box-shadow 0.2s cubic-bezier(1, 0.885, 0.32, 1);
     transition-delay: 0.2s, 0s;
-    background: radial-gradient(circle at center, #a58725 1px, rgba(255, 255, 255, 0.005) 1px, rgba(255, 255, 255, 0.005) 20px) 0px 0px/20px 20px, radial-gradient(circle at center, #a58725 1px, rgba(255, 255, 255, 0.005) 1px, rgba(255, 255, 255, 0.005) 20px) 10px 10px/20px 20px;
+    background: radial-gradient(circle at center, #071b25 1px, rgba(255, 255, 255, 0.005) 1px, rgba(255, 255, 255, 0.005) 20px) 0px 0px/20px 20px, radial-gradient(circle at center, #071b25 1px, rgba(255, 255, 255, 0.005) 1px, rgba(255, 255, 255, 0.005) 20px) 10px 10px/20px 20px;
     border-radius: 5px;
 }
 
@@ -1451,7 +1427,7 @@ body #wrap .panel .thumb:after {
     top: 100%;
     border-style: dashed;
     border-width: 2px 2px 2px 2px;
-    border-color: transparent #a58725 #a58725 transparent;
+    border-color: transparent #071b25 #071b25 transparent;
     border-radius: 0 0 10px 0;
     opacity: 0.25;
 }
@@ -1466,7 +1442,7 @@ body #wrap .panel .thumb img {
     width: auto;
     height: 200%;
     z-index: -1;
-    filter: saturate(0) blur(calc(50px - (var(--progress) * 125px))) brightness(0.5) contrast(4);
+    filter: saturate(0) blur(calc(50px - (var(--progress) * 125px))) brightness(0.8) contrast(4);
     mix-blend-mode: overlay;
 }
 
