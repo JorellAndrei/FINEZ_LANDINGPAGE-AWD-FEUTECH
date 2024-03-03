@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINEZ [S4-TECHNICAL] Module 5 & 6 Machine Problem</title>
+
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="./Assets/JS/script.js"></script>
+
+</head>
+
+<style>
+    /*----------------- BUTTON --------------------------*/
+    
+    .btn {
+        margin-top: 50px;
+        float: right;
+        transform: translateX(-100px);
+    }
+    
+    @media only screen and (max-width: 766px) {
+        .btn {
+            float: right;
+            transform: translateX(10px);
+        }
+    }
+    
+    @media (max-width: 900px) {
+        .btn {
+            float: right;
+            transform: translateX(-180px);
+        }
+    }
+    
+    button {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        background: transparent;
+        padding: 0;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: 900;
+    }
+    
+    button.learn-more {
+        width: 12rem;
+        height: auto;
+    }
+    
+    button.learn-more .circle {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: #5b3393;
+        border-radius: 1.625rem;
+    }
+    
+    button.learn-more .circle .icon {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #5b3393;
+    }
+    
+    button.learn-more .circle .icon.arrow {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        left: 0.625rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: none;
+    }
+    
+    button.learn-more .circle .icon.arrow::before {
+        position: absolute;
+        content: "";
+        top: -0.29rem;
+        right: 0.0625rem;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-top: 0.125rem solid #fff;
+        border-right: 0.125rem solid #fff;
+        transform: rotate(45deg);
+    }
+    
+    button.learn-more .button-text {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: #fff;
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    button:hover .circle {
+        width: 100%;
+    }
+    
+    button:hover .circle .icon.arrow {
+        background: #fff;
+        transform: translate(1rem, 0);
+    }
+    
+    button:hover .button-text {
+        color: #FFD23F;
+    }
+    
+    .pao-card {
+        position: relative;
+        padding: 12px 35px;
+        background: #5b3393;
+        font-size: 17px;
+        font-weight: 900;
+        font-family: Poppins;
+        color: #ffffff;
+        border: 3px solid #7f67a1;
+        border-radius: 40px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    
+    .star-1 {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        width: 25px;
+        height: auto;
+        filter: drop-shadow(0 0 0 #7f67a1);
+        z-index: -5;
+        transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+    }
+    
+    .star-2 {
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        width: 15px;
+        height: auto;
+        filter: drop-shadow(0 0 0 #7f67a1);
+        z-index: -5;
+        transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+    }
+    
+    .star-3 {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        width: 5px;
+        height: auto;
+        filter: drop-shadow(0 0 0 #7f67a1);
+        z-index: -5;
+        transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+    }
+    
+    .star-4 {
+        position: absolute;
+        top: 20%;
+        left: 40%;
+        width: 8px;
+        height: auto;
+        filter: drop-shadow(0 0 0 #7f67a1);
+        z-index: -5;
+        transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+    }
+    
+    .star-5 {
+        position: absolute;
+        top: 25%;
+        left: 45%;
+        width: 15px;
+        height: auto;
+        filter: drop-shadow(0 0 0 #7f67a1);
+        z-index: -5;
+        transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+    }
+    
+    .star-6 {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        width: 5px;
+        height: auto;
+        filter: drop-shadow(0 0 0 #7f67a1);
+        z-index: -5;
+        transition: all 0.8s ease;
+    }
+    
+    .pao-card:hover {
+        background: transparent;
+        color: #FFD23F;
+        box-shadow: 0 0 25px #fec1958c;
+    }
+    
+    .pao-card:hover .star-1 {
+        position: absolute;
+        top: -80%;
+        left: -30%;
+        width: 25px;
+        height: auto;
+        filter: drop-shadow(0 0 10px #fffdef);
+        z-index: 2;
+    }
+    
+    .pao-card:hover .star-2 {
+        position: absolute;
+        top: -25%;
+        left: 10%;
+        width: 15px;
+        height: auto;
+        filter: drop-shadow(0 0 10px #fffdef);
+        z-index: 2;
+    }
+    
+    .pao-card:hover .star-3 {
+        position: absolute;
+        top: 55%;
+        left: 25%;
+        width: 5px;
+        height: auto;
+        filter: drop-shadow(0 0 10px #fffdef);
+        z-index: 2;
+    }
+    
+    .pao-card:hover .star-4 {
+        position: absolute;
+        top: 30%;
+        left: 80%;
+        width: 8px;
+        height: auto;
+        filter: drop-shadow(0 0 10px #fffdef);
+        z-index: 2;
+    }
+    
+    .pao-card:hover .star-5 {
+        position: absolute;
+        top: 25%;
+        left: 115%;
+        width: 15px;
+        height: auto;
+        filter: drop-shadow(0 0 10px #fffdef);
+        z-index: 2;
+    }
+    
+    .pao-card:hover .star-6 {
+        position: absolute;
+        top: 5%;
+        left: 60%;
+        width: 5px;
+        height: auto;
+        filter: drop-shadow(0 0 10px #fffdef);
+        z-index: 2;
+    }
+    
+    .fil0 {
+        fill: #fffdef;
+    }
+</style>
+
+<body style="background-color: rgb(50, 22, 59);">
+    <section class="masthead" role="img" aria-label="Image Description">
+        <svg>
+            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                Paotsin
+            </text>
+        </svg>
+    </section>
+
+    <div class="btn">
+        <button class="learn-more">
+        <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">Learn More</span>
+      </button>
+        <button class="pao-card" id="paoCardButton">
+            Pao Cards
+            <div class="star-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.1"
+                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                viewBox="0 0 784.11 815.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    class="fil0"
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="star-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.1"
+                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                viewBox="0 0 784.11 815.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    class="fil0"
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="star-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.1"
+                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                viewBox="0 0 784.11 815.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    class="fil0"
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="star-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.1"
+                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                viewBox="0 0 784.11 815.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    class="fil0"
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="star-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.1"
+                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                viewBox="0 0 784.11 815.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    class="fil0"
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="star-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.1"
+                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                viewBox="0 0 784.11 815.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    class="fil0"
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+          </button>
+    </div>
+
+    <br>
+    <div class="container">
+
+        <!-- start -->
+        <div class="product">
+            <div class="product-card" onclick="togglePopup(0)">
+                <img src="./Assets/Images/Dumplings.png" class="product-img" alt="">
+                <div class="product-info">
+                    <h2 class="name">Shark's Fin</h2>
+                    <span class="price">₱64.00</span>
+                </div>
+
+            </div>
+            <div class="popup-view" onclick="closePopup(event)">
+                <div class="popup-card">
+
+                    <div class="product-img">
+                        <img src="./Assets/Images/Dumplings.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h2>Shark's Fin<br><span>Dumplings</span></h2>
+                        <p>
+                            Indulge in the delightful simplicity of our Dumplings. Whether you prefer them solo, fried to perfection, or steamed until tender, each bite promises a burst of flavor that will tantalize your taste buds. <br> <br> Priced at
+                            ₱64.00 each, these dumplings are the epitome of comfort food, perfect for any occasion.</p>
+                        <span class="price">₱64.00</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+
+
+        <div class="product">
+            <div class="product-card" onclick="togglePopup(1)">
+                <div class="product-info">
+                    <h2 class="name">Hainanese</h2>
+                    <span class="price">₱84.00</span>
+                </div>
+                <img src="./Assets/Images/Hainanese.png" class="product-img" alt="">
+            </div>
+            <div class="popup-view" onclick="closePopup(event)">
+                <div class="popup-card">
+                    <div class="product-img">
+                        <img src="./Assets/Images/Hainanese.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h2>Hainanese<br><span>Budget Meals</span></h2>
+                        <p>Elevate your dining experience with our Dumplings paired with fragrant rice. <br> <br> Choose between Dumplings on Hainanese Rice or Dumplings on Lemak Rice, both priced at ₱84.00, creating a symphony of flavors that will leave
+                            you craving for more.</p>
+                        <span class="price">₱84.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-card" onclick="togglePopup(2)">
+                <div class="product-info">
+                    <h2 class="name">Laksa</h2>
+                    <span class="price">₱152.00</span>
+                </div>
+                <img src="./Assets/Images/Laksa.png" class="product-img" alt="">
+            </div>
+            <div class="popup-view" onclick="closePopup(event)">
+                <div class="popup-card">
+                    <div class="product-img">
+                        <img src="./Assets/Images/Laksa.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h2>Laksa<br><span>Soups</span></h2>
+                        <p>Embark on a culinary journey with our Laksa dishes, each a harmonious blend of noodles, spices, and savory goodness. <br> <br> Whether you choose Dumplings on Laksa, Asian Chicken on Laksa, every spoonful is a symphony of flavors
+                            that will transport you to the vibrant streets of Asia.</p>
+                        <span class="price">₱152.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-card" onclick="togglePopup(3)">
+                <div class="product-info">
+                    <h2 class="name">Asian Chicken</h2>
+                    <span class="price">₱136.00</span>
+                </div>
+                <img src="./Assets/Images/Chicken.png" class="product-img" alt="">
+            </div>
+            <div class="popup-view" onclick="closePopup(event)">
+                <div class="popup-card">
+                    <div class="product-img">
+                        <img src="./Assets/Images/Chicken.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h2>Asian Chicken<br><span>Chickens</span></h2>
+                        <p>Savor the succulent taste of our Asian Chicken served with your choice of rice.
+                            <br> <br> Our Asian Chicken dishes are packed with savory goodness that will satisfy your hunger and delight your palate with every bite.</p>
+                        <span class="price">₱136.00</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+
+
+        <div class="product">
+            <div class="product-card" onclick="togglePopup(4)">
+                <div class="product-info">
+                    <h2 class="name">Crackling Pork</h2>
+                    <span class="price">₱144.00</span>
+                </div>
+                <img src="./Assets/Images/Crackling.png" class="product-img" alt="">
+            </div>
+            <div class="popup-view" onclick="closePopup(event)">
+                <div class="popup-card">
+                    <div class="product-img">
+                        <img src="./Assets/Images/Crackling.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h2>Crackling Pork<br><span>Porks</span></h2>
+                        <p>Indulge in the crispy perfection of our Crackling Pork paired with your preferred rice variant.
+                            <br> <br> Crackling Pork with Rice offer a delightful contrast of textures and flavors, creating a mouthwatering experience that will leave you craving for more.</p>
+                        <span class="price">₱144.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-card" onclick="togglePopup(5)">
+                <div class="product-info">
+                    <h2 class="name">Panda Coolers</h2>
+                    <span class="price">₱44.00</span>
+                </div>
+                <img style="width: 700%; margin-right: 150px;" src="./Assets/Images/Drinks.png" class="product-img" alt="">
+            </div>
+            <div class="popup-view" onclick="closePopup(event)">
+                <div class="popup-card">
+                    <div class="product-img">
+                        <img src="./Assets/Images/Drinks.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h2>Panda Coolers<br><span>Drinks</span></h2>
+                        <p>Treat yourself to the refreshing taste of our Buko Pandan, a beloved Filipino dessert that combines the natural sweetness of young coconut with the vibrant flavor of pandan jelly.
+                            <br> <br> Pandan is the perfect way to cool down and satisfy your sweet cravings on a hot day. Indulge in this delightful treat and experience a taste of tropical paradise with every spoonful.
+                        </p>
+                        <span class="price">₱44.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
