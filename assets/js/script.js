@@ -7,15 +7,21 @@ let links = document.getElementsByTagName("a");
 
 let frames = [
     "/1 Animation-Project/index.html",
-    " https://jorellandrei.github.io/FINEZ_RESUME-AWD-FEUTECH/",
-    "https://codepen.io/cobra_winfrey/debug/OJVJJoj",
-    "https://cdpn.io/cobra_winfrey/debug/YzXOBEN",
-    "https://codepen.io/cobra_winfrey/debug/qBZWVmO",
-    "https://codepen.io/cobra_winfrey/debug/eYOXOdB",
-    "https://codepen.io/cobra_winfrey/debug/OJXJeod",
-    "https://codepen.io/cobra_winfrey/debug/PoqVQRq",
-    "https://cdpn.io/cobra_winfrey/debug/qgEGMZ",
-    "https://codepen.io/cobra_winfrey/debug/RwWYGxj"
+    "/2 Resume/index.html",
+    "/3 Background-Animation/index.html",
+    "/",
+    "/",
+    "/",
+    "/",
+    "/",
+    "/",
+    "/",
+    "/",
+    "/",
+    "/",
+    "/",
+    "/",
+
 ];
 
 // Load iFrames on demand & remove after modal is closed to reduce weight & smooth out transitions
