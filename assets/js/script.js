@@ -6,8 +6,8 @@ let penLink = document.getElementById("penlink");
 let links = document.getElementsByTagName("a");
 
 let frames = [
-    "https://jorellandrei.github.io/FINEZ_ANIMATION-AWD-FEUTECH/",
-    "https://cdpn.io/cobra_winfrey/debug/wvGyKEY",
+    "/1 Animation-Project/index.html",
+    " https://jorellandrei.github.io/FINEZ_RESUME-AWD-FEUTECH/",
     "https://codepen.io/cobra_winfrey/debug/OJVJJoj",
     "https://cdpn.io/cobra_winfrey/debug/YzXOBEN",
     "https://codepen.io/cobra_winfrey/debug/qBZWVmO",
