@@ -6,17 +6,17 @@ let penLink = document.getElementById("penlink");
 let links = document.getElementsByTagName("a");
 
 let frames = [
-    "./1 Animation-Project/index.html",
-    "./2 Resume/index.html",
-    "./3 Background-Animation/index.html",
-    "./4 Jumping-Letters/index.html",
-    "./5 Notification-Bell/index.html",
+    "https://jorellandrei.github.io/FINEZ_ANIMATION-AWD-FEUTECH/",
+    "https://jorellandrei.github.io/FINEZ_RESUME-AWD-FEUTECH/",
+    "https://jorellandrei.github.io/FINEZ_ACT1-AWD-FEUTECH/",
+    "https://jorellandrei.github.io/FINEZ_ACT2-AWD-FEUTECH/",
+    "https://jorellandrei.github.io/FINEZ_ACT3A-AWD-FEUTECH/",
     "./6 Search Bar/index.html",
     "./7 Calculator/index.html",
     "./8 Colored Days/index.html",
     "./9 Price Card/index.html",
     "./10 Info Card/index.html",
-    "./11 Illumination-Project/index.html",
+    "https://jorellandrei.github.io/FINEZ_ACT3B-AWD-FEUTECH/",
     "/",
     "/",
     "/",
