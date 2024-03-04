@@ -1,0 +1,330 @@
+:root {
+    --background-light: #f0f0f0;
+    --text-light: #111;
+    --text-light2: #273d36;
+    --border-light: #f0f0f0a6;
+    --border-light2: #3d6b5d;
+    --background-dark: #495E57;
+    --text-dark: #F4CE14;
+    --text2-dark: #F5F7F8;
+    --border-dark: #111;
+    --border-dark2: #F4CE14;
+}
+
+.dark-mode {
+    --background: var(--background-dark);
+    --text: var(--text-dark);
+    --text2: var(--text2-dark);
+    --border: var(--border-dark);
+    --border2: var(--border-dark2);
+}
+
+.light-mode {
+    --background: var(--background-light);
+    --text: var(--text-light);
+    --text2: var(--text-light2);
+    --border: var(--text-light);
+    --border2: var(--border-light2);
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--background-light);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s;
+}
+
+h2 {
+    font-size: 23px;
+    font-weight: 900;
+    color: var(--text);
+}
+
+.resume {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px 80px;
+    border-radius: 8px;
+    border-style: solid;
+    overflow: hidden;
+    background-color: var(--background);
+    color: var(--text2);
+    border-color: var(--border);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+/* .c {
+    background-color: #F4CE14;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 20px;
+} */
+
+.row {
+    padding: 1 8px 0;
+}
+
+.top-row {
+    margin-bottom: 100px;
+}
+
+hr {
+    border-width: 6px;
+    border: 1px solid;
+    border-color: var(--border);
+    border-radius: 7px 7px 7px 7px;
+    color: var(--border);
+    margin-top: 17em;
+    transition: border-color 0.3s;
+}
+
+.left-part {
+    width: 60%;
+    float: left;
+    border-radius: 20px;
+    margin-top: 44px;
+}
+
+.sub-rows {
+    font-size: 17px;
+    margin-top: -13px;
+}
+
+.sub-rows p {
+    margin-top: -13px;
+}
+
+.right-part {
+    width: 40%;
+    float: left;
+    margin-top: 15px;
+}
+
+@keyframes imageAnimation {
+    0% {
+        transform: scale(1);
+        border: 2px solid transparent;
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        border: 4px solid #F4CE14;
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        border: 2px solid #F4CE14;
+        opacity: 1;
+    }
+}
+
+.right-part img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 0px;
+    transition: .3s transform 0.3s, border 0.3s, opacity 0.3s;
+    animation: none;
+    --s: 250px;
+    --b: 8px;
+    --g: 5px;
+    --c: var(--border2);
+    width: var(--s);
+    aspect-ratio: 1;
+    outline: calc(var(--s)/2) solid rgba(0, 0, 0, 0.007);
+    outline-offset: calc(var(--s)/-2);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.right-part img:hover {
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+}
+
+img+img {
+    border-radius: 50%;
+}
+
+.dark-mode .right-part img {
+    animation: imageAnimation 0.5s ease-in-out;
+}
+
+.dark-mode .right-part img {
+    animation: imageAnimation 0.5s ease-in-out;
+}
+
+.resume,
+.change-color,
+hr {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.resume,
+.change-color,
+hr {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.objectives,
+.academic-background,
+.skills {
+    margin-top: 5px;
+    padding-top: 10px;
+}
+
+.objectives p {
+    font-size: 20px;
+    margin-top: 1px;
+    text-align: justify;
+    text-indent: 5;
+}
+
+.academic-background ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.academic-background li {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.academic-background li .colon {
+    margin-left: 130px;
+}
+
+.academic-background li .ab1 {
+    margin-left: 94px;
+}
+
+.academic-background li .ab2 {
+    margin-left: 300px;
+}
+
+.academic-background strong {
+    display: inline-block;
+    width: 100px;
+}
+
+.skills li {
+    font-size: 20px;
+    list-style: none;
+}
+
+h1,
+h2 {
+    color: var(--text);
+}
+
+.change-color {
+    align-items: center;
+    background-color: #495E57;
+    border: 2px solid #111111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #F4CE14;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    float: left;
+    margin: 20px 40px auto;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.change-color:after {
+    background-color: #8eb4a7;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+.change-color:hover:after {
+    transform: translate(0, 0);
+}
+
+.change-color:active {
+    background-color: #ffdeda;
+    outline: 0;
+}
+
+.change-color:hover {
+    outline: 0;
+}
+
+.center-button {
+    display: flex;
+    float: left;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: -500px;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+}
+
+.hover-3 {
+    --b: 0.1em;
+    --c: var(--text2);
+    color: var(--text);
+    padding-block: var(--b);
+    background: linear-gradient(var(--c) 50%, #000 0) 0% calc(100% - var(--_p, 0%))/100% 200%, linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: .3s var(--_s, 0s) linear, background-size .3s calc(.3s - var(--_s, 0s));
+}
+
+.hover-3:hover {
+    --_p: 95%;
+    --_s: .3s;
+}
+
+@media only screen and (max-width: 768px) {
+    .resume {
+        padding: 20px 20px;
+        margin: 20px auto;
+    }
+    .top-row {
+        margin-bottom: 30px;
+    }
+    .left-part,
+    .right-part {
+        width: 100%;
+    }
+    .right-part img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .center-button {
+        margin: 20px auto;
+    }
+    .center-content {
+        margin: 0 auto;
+    }
+}
